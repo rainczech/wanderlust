@@ -4,71 +4,82 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Wanderlust Responsibly</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
     
 </head>
 <body>
     <div class="container">
-        <nav>
-            <div class="nav-wrapper">
-              <form>
-                <div class="input-field">
-                  <input id="search" type="search" required>
-                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                  <i class="material-icons">close</i>
-                </div>
-              </form>
-            </div>
-          </nav>
 
-          <div class="row">
-              <!-- search bar? -->
-          </div>
-          <div class="row">
+                      <h1>Wanderlust Responsibly</h1>
+
+            <nav>
+                    <div class="nav-wrapper blue-grey search">
+                      <form>
+                        <div class="input-field">
+                          <input id="search" type="search" required>
+                          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                          <i class="material-icons">close</i>
+                        </div>
+                      </form>
+                    </div>
+                  </nav>
+        <div class="row"></div>
+          <div class="row destination-button">
               <!-- where the buttons go   -->
-
+              <a class="waves-effect waves-light btn">placeholder</a>
+              <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>placeholder</a>
+              <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>placeholder</a>
 
           </div>
 
         <div class="row">
             <div class="col s4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ratione esse incidunt quae reiciendis quibusdam enim ea quia repudiandae, possimus rem? Ex, illum totam vel similique quisquam expedita ab ratione.
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="assets/images/pen-calendar-to-do-checklist.jpg">
+                    </div>
+                    <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Your List<i class="material-icons right">more_vert</i></span>
+                    <!-- <p>click me to reveal your to do list</p> -->
+                    </div>
+                    <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
             </div>
             <div class="col s8">
                 <!-- weather -->
-                <div class="card blue-grey darken-1">
+                <div class="card blue-grey">
                     <div class="card-content white-text">
                     <span class="card-title">Weather</span>
-                          <p>I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p>
+                    <div class="row">
+                        <div class="temp col s4">temperature</div>
+                        <div class="weather col s4">conditions</div>
+                        <div class="weather-icon col s4">conditions icon</div>
+                    </div>
                     </div>
                  </div>
             </div>
-            <div class="col s8 offset-s4">
+            <div class="col s8">
                 <!-- map -->
-                <div class="card blue-grey darken-1">
+                <div class="card blue-grey">
                     <div class="card-content white-text">
                     <span class="card-title">Local Map</span>
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p>
+                        <div class="map">google map magic here</div>
                 </div>
                 </div>
             </div>
-        
-
-
         </div>
+        <footer> © Copyright 2018 The 404's</footer>
+    <!-- end of container div below -->
     </div>
-
-
-
-
-
-
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="wanderlust.js"></script>
 </body>
