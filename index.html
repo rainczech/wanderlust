@@ -4,85 +4,88 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Wanderlust Responsibly</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
     
 </head>
 <body>
     <div class="container">
-        <nav>
-            <div class="nav-wrapper">
-              <form>
-                <div class="input-field">
-                  <input id="search" id="location" type="search" required>
-                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                  <i class="material-icons">close</i>
-                </div>
-              </form>
-            </div>
-          </nav>
 
-          <div class="row">
-              <!-- search bar? -->
-          </div>
-          <div class="row">
-              <!-- where the buttons go   -->
+                      <h1>Wanderlust Responsibly</h1>
 
-
-          </div>
+            <nav>
+                    <div class="nav-wrapper blue-grey search">
+                      <form>
+                        <div class="input-field">
+                          <input id="search" type="search" required>
+                          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                          <i class="material-icons">close</i>
+                        </div>
+                      </form>
+                    </div>
+                  </nav>
+        <div class="row"></div>
 
         <div class="row">
             <div class="col s4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ratione esse incidunt quae reiciendis quibusdam enim ea quia repudiandae, possimus rem? Ex, illum totam vel similique quisquam expedita ab ratione.
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="assets/images/pen-calendar-to-do-checklist.jpg">
+                    </div>
+                    <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Your List<i class="material-icons right">more_vert</i></span>
+                    </div>
+                    <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">To Do<i class="material-icons right">close</i></span>
+                        <div class="row">
+                        <div class="fire-base">Here is where the firebase list will be</div>
+                    </div>
+                        <div class="row">
+                                <form class="col s12">
+                                  <div class="row">
+                                    <div class="input-field col s12">
+                                      <i class="tiny material-icons prefix" id="add-item">add_circle</i>
+                                      <input class="user-input" id="icon_prefix" type="text" class="validate" required>
+                                      <label for="icon_prefix">Add an Item</label>
+                                    </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col s8">
-                <div><span id="showHumidity"></span></div>
-                <div><span id="showTemp"></span></div>
-                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quod excepturi soluta tenetur magnam? Vel temporibus, consectetur, alias quis deserunt autem blanditiis itaque maxime nam aliquam quod. Dolores, quisquam earum. -->
+                <!-- weather -->
+                <div class="card blue-grey">
+                    <div class="card-content white-text">
+                    <span class="card-title">Weather</span>
+                    <div class="row">
+                        <div class="temp col s4">temperature</div>
+                        <div class="weather col s4">conditions</div>
+                        <div class="weather-icon col s4">conditions icon</div>
+                    </div>
+                    </div>
+                 </div>
             </div>
             <div class="col s8">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim tempora ipsam unde officia quia ex sint suscipit sed, voluptates reiciendis itaque ad reprehenderit ab. Cumque fuga maxime architecto dolorem assumenda?
+                <!-- map -->
+                <div class="card blue-grey">
+                    <div class="card-content white-text">
+                    <span class="card-title">Local Map</span>
+                        <div class="map">google map magic here</div>
+                </div>
+                </div>
             </div>
-        
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <footer> © Copyright 2018 The 404's</footer>
+    <!-- end of container div below -->
     </div>
-
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="wanderlust.js"></script>
 </body>

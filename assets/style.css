@@ -1,0 +1,37 @@
+body {
+    background-color: #25363E;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card {
+    font-family: 'Raleway', sans-serif;
+}
+
+.card-content {
+    font-family: 'Raleway', sans-serif;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* for sticky footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
