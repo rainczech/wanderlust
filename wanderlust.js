@@ -7,3 +7,16 @@ var config = {
     messagingSenderId: "285359026722"
   };
   firebase.initializeApp(config);
+
+var database = firebase.database();
+
+$(".user-input").on("keypress", function(e) {
+    if(e.keycode == 13) {
+        var input = $(".user-input").val().trim();
+        database.ref.push({input: input});
+
+
+
+
+    }
+   
