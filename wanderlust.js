@@ -10,13 +10,10 @@ var config = {
 
 var database = firebase.database();
 
-$(".user-input").on("keypress", function(e) {
-    if(e.keycode == 13) {
-        var input = $(".user-input").val().trim();
-        database.ref.push({input: input});
-
-
-
-
-    }
-   
+$("#formName").on("submit", function(e) {
+    e.preventDefault();
+    console.log("Is this working????");
+    var input = $(".user-input").val().trim();
+    database.ref().push({input: input});
+    console.log(input);
+});
