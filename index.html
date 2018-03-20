@@ -16,7 +16,7 @@
             <div class="nav-wrapper">
               <form>
                 <div class="input-field">
-                  <input id="search" type="search" required>
+                  <input id="search" id="location" type="search" required>
                   <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                   <i class="material-icons">close</i>
                 </div>
@@ -38,7 +38,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ratione esse incidunt quae reiciendis quibusdam enim ea quia repudiandae, possimus rem? Ex, illum totam vel similique quisquam expedita ab ratione.
             </div>
             <div class="col s8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quod excepturi soluta tenetur magnam? Vel temporibus, consectetur, alias quis deserunt autem blanditiis itaque maxime nam aliquam quod. Dolores, quisquam earum.
+                <div><span id="showHumidity"></span></div>
+                <div><span id="showTemp"></span></div>
+                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quod excepturi soluta tenetur magnam? Vel temporibus, consectetur, alias quis deserunt autem blanditiis itaque maxime nam aliquam quod. Dolores, quisquam earum. -->
             </div>
             <div class="col s8">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim tempora ipsam unde officia quia ex sint suscipit sed, voluptates reiciendis itaque ad reprehenderit ab. Cumque fuga maxime architecto dolorem assumenda?
@@ -80,7 +82,7 @@
 
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="wanderlust.js"></script>
 </body>
