@@ -12,8 +12,16 @@ var database = firebase.database();
 
 $("#formName").on("submit", function(e) {
     e.preventDefault();
-    console.log("Is this working????");
     var input = $(".user-input").val().trim();
     database.ref().push({input: input});
     console.log(input);
+
+   
 });
+
+    $(".fire-base").text("boop!");
+
+for (var i=0; i<database.length; i++) {
+    console.log(database[i].input);
+    $(".fire-base").text("blah");
+}
