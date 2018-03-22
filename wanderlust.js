@@ -1,5 +1,4 @@
-// Mike's portion
-// ==================
+
 
 $(document).ready(function() {
     $('#searchForm').on("submit", function(event) {
@@ -165,7 +164,6 @@ var config = {
   };
   firebase.initializeApp(config);
 
-var database = firebase.database();
 
 $("#formName").on("submit", function(e) {
     e.preventDefault();
@@ -186,4 +184,4 @@ for (var i=0; i<database.length; i++) {
     // $(".fire-base").append$("<div>"database[i].input"</div>");
 }
 
-
+// var database = firebase.database();
