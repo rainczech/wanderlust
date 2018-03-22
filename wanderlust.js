@@ -164,24 +164,32 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  var database = firebase.database();
 
 $("#formName").on("submit", function(e) {
     e.preventDefault();
     var input = $(".user-input").val().trim();
     database.ref().push({input: input});
     console.log(input);
-    $(".fire-base").append(input);
-    $(".user-input").val("");
+    $(".user-input").val("");   
 
-   
 });
 
-    // $(".fire-base").text("boop!");
-// console.log(database[i].input);
-// for (var i=0; i<database.length; i++) {
-    // var listItem = database.[i]
-    
-    // $(".fire-base").append$("<div>"database[i].input"</div>");
+database.ref().on("child_added", function(childSnapshot){
+    var user=childSnapshot.val().input;
+    console.log(childSnapshot.val().input);
+    $(".fire-base").prepend("<p>"+user+"</p>");
+})
+
+// database.ref().on("child_added", function(childsnapshot){
+//     var user = childsnapshot.val().input;
+//     console.log(childsnapshot.val().input);
+
+//     $(".fire-base").prepend("<p>"+input+"</p>");
 
 
-// var database = firebase.database();
+// })
+
+
+
+
