@@ -15,7 +15,7 @@ $(document).ready(function() {
         
         success: function(response) {
           $('#showCity').text(`Current Weather in ${response.name}:`);
-          $('.showTemp').text(`${response.main.temp}oF`);
+          $('.showTemp').html(`${parseInt(response.main.temp, 10)}&deg;F`);
           $('.showCondition').text(`${response.weather[0].description}`);
           $('#conditionIcon').attr("src", `http://openweathermap.org/img/w/${response.weather[0].icon}.png`);
           console.log(response);
