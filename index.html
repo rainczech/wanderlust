@@ -19,7 +19,7 @@
 
             <nav>
                     <div class="nav-wrapper blue-grey search">
-                      <form>
+                      <form id="searchForm">
                         <div class="input-field">
                           <input id="search" type="search" required>
                           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
@@ -62,11 +62,11 @@
                 <!-- weather -->
                 <div class="card blue-grey">
                     <div class="card-content white-text">
-                    <span class="card-title">Weather</span>
+                    <span class="card-title" id="showCity">Current Weather in</span>
                     <div class="row">
-                        <div class="temp col s4">temperature</div>
-                        <div class="weather col s4">conditions</div>
-                        <div class="weather-icon col s4">conditions icon</div>
+                        <div class="temp col s4"><span class="showTemp" id="currentTemp"></span></div>
+                        <div class="weather col s4"><span class="showCondition" id="currentCondition"></div>
+                        <div class="weather-icon col s4"><img src="assets/images/smileyFace.png" id="conditionIcon" height=100px></div>
                     </div>
                     </div>
                  </div>

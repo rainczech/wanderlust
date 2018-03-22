@@ -35,3 +35,11 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+  #currentTemp {
+      font-size: 30px;
+  }
+
+  #currentCondition {
+      font-size: 30px;
+  }
