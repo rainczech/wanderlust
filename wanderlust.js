@@ -177,11 +177,11 @@ $("#formName").on("submit", function(e) {
 });
 
     // $(".fire-base").text("boop!");
-
-for (var i=0; i<database.length; i++) {
-    console.log(database);
+// console.log(database[i].input);
+// for (var i=0; i<database.length; i++) {
+    // var listItem = database.[i]
     
     // $(".fire-base").append$("<div>"database[i].input"</div>");
-}
+
 
 // var database = firebase.database();
