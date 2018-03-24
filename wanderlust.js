@@ -178,17 +178,9 @@ $("#formName").on("submit", function(e) {
 database.ref().on("child_added", function(childSnapshot){
     var user=childSnapshot.val().input;
     console.log(childSnapshot.val().input);
-    $(".fire-base").prepend("<p>"+user+"</p>");
-})
-
-// database.ref().on("child_added", function(childsnapshot){
-//     var user = childsnapshot.val().input;
-//     console.log(childsnapshot.val().input);
-
-//     $(".fire-base").prepend("<p>"+input+"</p>");
-
-
-// })
+    $(".fire-base").prepend("<p><input type='checkbox' id='checkboxid'/><label>" + user + "</label></p>");
+    
+});
 
 
 

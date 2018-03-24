@@ -24,6 +24,16 @@ footer {
     font-family: 'Raleway', sans-serif;
 }
 
+.fire-base {
+    margin-top: 10px;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: static;
+    left: 0px; 
+    opacity: 1; 
+  }
+
 
 /* for sticky footer */
 body {
