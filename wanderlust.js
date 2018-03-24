@@ -178,10 +178,15 @@ $("#formName").on("submit", function(e) {
 database.ref().on("child_added", function(childSnapshot){
     var user=childSnapshot.val().input;
     console.log(childSnapshot.val().input);
-    $(".fire-base").prepend("<p><input type='checkbox' id='checkboxid'/><label>" + user + "</label></p>");
+    $(".fire-base").prepend("<p><input type='checkbox' id=" +childSnapshot.val().input+"/><label for=" +childSnapshot.val().input+">" + user + "</label></p>");
     
 });
+// "<p><label for="+childSnapshot.val().input + "><input type='checkbox'id=" + childSnapshot.val().input+ "/><span>" + user + "</span></label></p>");
 
 
+// $("#checkboxid").on("click", function (){
+//     database.ref().remove();
 
+
+// });
 

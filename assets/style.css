@@ -27,13 +27,13 @@ footer {
 .fire-base {
     margin-top: 10px;
 }
+/* checkbox {
+        pointer-events: auto;
+      } */
 
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-    position: static;
-    left: 0px; 
-    opacity: 1; 
-  }
-
+/* input[type="checkbox"] {
+    pointer-events: auto !important;
+    } */
 
 /* for sticky footer */
 body {
