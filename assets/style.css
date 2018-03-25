@@ -24,6 +24,18 @@ footer {
     font-family: 'Raleway', sans-serif;
 }
 
+.fire-base {
+    margin-top: 10px;
+}
+/* checkbox {
+        pointer-events: auto;
+      } */
+
+input[type="checkbox"], [type="radio"] {
+    + label{
+    pointer-events: auto !important;
+    }
+}
 
 /* for sticky footer */
 body {

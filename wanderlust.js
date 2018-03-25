@@ -1,34 +1,58 @@
 
 
 $(document).ready(function() {
-    $('#searchForm').on("submit", function(event) {
-      event.preventDefault();
-      let city = $('#search').val();
-      $('#search').val("");
-      $.ajax({
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=7fbd1c73cafb287415d9c63a48da591a`,
-        type: 'GET',
-        data: {
-          format: 'json'
-        
-        },
-        
-        success: function(response) {
-          $('#showCity').text(`Current Weather in ${response.name}:`);
-          $('.showTemp').text(`${response.main.temp}oF`);
-          $('.showCondition').text(`${response.weather[0].description}`);
-          $('#conditionIcon').attr("src", `http://openweathermap.org/img/w/${response.weather[0].icon}.png`);
-          console.log(response);
-        },
-        error: function() {
-          $('#errors').text("There was an error processing your request. Please try again.")
-        }
-      });
+    // Geocoding API call:
+  $('#searchForm').on("submit", function(event) {
+  event.preventDefault();
+  let city = $('#search').val();
+  $('#search').val("");
+  $.ajax({
+    url: `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyAsWkvNbmXG6vlyqnYdfy3JA4jTBKXzaf8`,
+    type: 'GET',
+    data: {
+      format: 'json'
+    
+    },
+    success: function(geodata) {
+        console.log(geodata);
+        $('#showLat').text(`Latitude is ${geodata.results[0].geometry.location.lat}`);
+        $('#showLong').text(`Longitude is ${geodata.results[0].geometry.location.lng}`);
+        var lat = geodata.results[0].geometry.location.lat;
+        var long = geodata.results[0].geometry.location.lng; 
+        console.log(lat);
+        console.log(long);
+    // function for nested weather api call:
+        findWeather(lat, long);
+      },
+      error: function() {
+        $('#errors').text("There was an error processing your request. Please try again.")
+      }
+      
     });
   });
+  // function for weather API call:
+  function findWeather (lat, long) {
+    $.ajax({
+              url: `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=7fbd1c73cafb287415d9c63a48da591a`,
+              type: 'GET',
+              data: {
+                format: 'json'
+              },
+              
+              success: function(response) {
+                $('#showCity').text(`Current Weather in ${response.name}:`);
+                $('.showTemp').html(`${parseInt(response.main.temp, 10)}&deg;F`);
+                $('.showCondition').text(`${response.weather[0].description}`);
+                $('#conditionIcon').attr("src", `http://openweathermap.org/img/w/${response.weather[0].icon}.png`);
+                console.log(response);
+              },
+              error: function() {
+                $('#errors').text("There was an error processing your request. Please try again.")
+              }
+            });
+        };
+    });
   
-  console.log("connected");
-
 
 
 
@@ -164,24 +188,33 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  var database = firebase.database();
 
 $("#formName").on("submit", function(e) {
     e.preventDefault();
     var input = $(".user-input").val().trim();
     database.ref().push({input: input});
-    console.log(input);
-    $(".fire-base").append(input);
-    $(".user-input").val("");
+    $(".user-input").val("");   
 
-   
 });
 
-    // $(".fire-base").text("boop!");
-// console.log(database[i].input);
-// for (var i=0; i<database.length; i++) {
-    // var listItem = database.[i]
+database.ref().on("child_added", function(childSnapshot){
+    var user=childSnapshot.val().input;
+    $(".fire-base").prepend("<p><input class='checkbox' id="+user+" type='checkbox' /><label for=" +user +">" + user + "</label></p>");
     
-    // $(".fire-base").append$("<div>"database[i].input"</div>");
+});
 
 
-// var database = firebase.database();
+$(".checkbox").on("click", function (){
+    console.log("click!");
+    // database.ref().remove();
+
+
+});
+
+database.ref().on("child_removed", function (newSnapshot){
+    var user = newSnapshot.val().input;
+    $(".fire-base").prepend("<p><input id="+user+" type='checkbox' /><label for=" +user +">" + user + "</label></p>");
+});
+    
+
