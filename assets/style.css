@@ -31,9 +31,11 @@ footer {
         pointer-events: auto;
       } */
 
-/* input[type="checkbox"] {
+input[type="checkbox"], [type="radio"] {
+    + label{
     pointer-events: auto !important;
-    } */
+    }
+}
 
 /* for sticky footer */
 body {
