@@ -79,7 +79,7 @@ $(document).ready(function() {
 
 // Sidney's portion
 // ==================
-// Creates map setting
+/// Creates map setting
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 32.781176, lng: -96.799383},
@@ -88,8 +88,9 @@ function initAutocomplete() {
   });
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
-  var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  var pac = document.getElementById('search');
+  var searchBox = new google.maps.places.SearchBox(pac);
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(input);
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
@@ -160,8 +161,6 @@ document.body.appendChild(script);
 
 
 
-
-
   
 
 
@@ -201,16 +200,16 @@ database.ref().on("child_added", function(childSnapshot){
 });
 
 
-$(".checkbox").on("click", "#user", function (){
-    console.log("click!");
-    // database.ref().remove();
+// $(".fire-base").on("click", ".checkbox", function (){
+//     console.log("click!");
+//     database.ref().remove("#user");
+//     // database.child("#user").removeValue();
 
+// });
 
-});
-
-database.ref().on("child_removed", function (newSnapshot){
-    var user = newSnapshot.val().input;
-    $(".fire-base").prepend("<p><input id="+user+" type='checkbox' /><label for=" +user +">" + user + "</label></p>");
-});
+// database.ref().on("child_removed", function (newSnapshot){
+//     var user = newSnapshot.val().input;
+//     $(".fire-base").prepend("<p><input id="+user+" type='checkbox' /><label for=" +user +">" + user + "</label></p>");
+// });
     
 
