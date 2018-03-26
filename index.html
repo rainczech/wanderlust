@@ -76,14 +76,19 @@
                 <div class="card blue-grey">
                     <div class="card-content white-text">
                     <span class="card-title">Local Map</span>
-                        <div class="map">google map magic here</div>
+                        <div id="map"></div>
                 </div>
                 </div>
             </div>
         </div>
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
+         
         <footer> © Copyright 2018 The 404's: Sidney Offord, Mike Smith, and Grace Ho</footer>
     <!-- end of container div below -->
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsWkvNbmXG6vlyqnYdfy3JA4jTBKXzaf8&libraries=places&callback=initAutocomplete"
+    async defer></script>    
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
