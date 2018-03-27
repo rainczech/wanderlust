@@ -32,7 +32,7 @@ $.ajax({
 // function for weather API call:
 function findWeather (lat, long) {
   $.ajax({
-            url: `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=7fbd1c73cafb287415d9c63a48da591a`,
+            url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=7fbd1c73cafb287415d9c63a48da591a`,
             type: 'GET',
             data: {
               format: 'json'
