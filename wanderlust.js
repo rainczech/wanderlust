@@ -6,7 +6,7 @@ event.preventDefault();
 let city = $('#search').val();
 $('#search').val("");
 $.ajax({
-  url: `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyAsWkvNbmXG6vlyqnYdfy3JA4jTBKXzaf8`,
+  url: `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyAW-bcnyz5B1n78cQDCU43ODkPFR80Z7tA`,
   type: 'GET',
   data: {
     format: 'json'
